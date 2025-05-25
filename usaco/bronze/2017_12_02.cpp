@@ -81,9 +81,6 @@ bool test(){
 vector<int> process( vector<int> a, vector<int> v) {
   int n = a.size();
   vector<int> a1 = flip(a);
-  for(int i = 0; i < n; i++){
-      cout << a1[i] << endl;
-  }
   vector<int> vres = shuffle(shuffle(shuffle(v, a1),a1),a1);
   return vres;
 }
