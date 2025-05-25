@@ -77,6 +77,8 @@ bool test(){
 }
 
 int main(){
+  freopen("shuffle.in", "r", stdin);
+  freopen("shuffle.out", "w", stdout);
   int n;
   cin >> n;
   vector<int> a(n);
