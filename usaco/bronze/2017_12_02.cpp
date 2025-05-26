@@ -36,8 +36,7 @@ SAMPLE OUTPUT:
 3333333
 4444444
 */
-#include <stdio.h>
-#include <bits/stdc++.h>
+#include <iostream>
 #include <vector>
 #include <cassert>
 
@@ -56,7 +55,7 @@ vector<int> shuffle(vector<int> v, vector<int> a){
   int n = v.size();
   vector<int> res(n);
   for(int i = 0; i < n; i++){
-    res[i] = v[a[i]-1];
+    res[a[i]-1] = v[i];
   }
   return res;
 }
@@ -79,7 +78,6 @@ bool test(){
 }
 
 vector<int> process( vector<int> a, vector<int> v) {
-  int n = a.size();
   vector<int> a1 = flip(a);
   vector<int> vres = shuffle(shuffle(shuffle(v, a1),a1),a1);
   return vres;
@@ -87,7 +85,7 @@ vector<int> process( vector<int> a, vector<int> v) {
 
 
 int main(){
-  (void)freopen("shuffle.in", "r", stdin);
+  (void)freopen("shuffle/1.in", "r", stdin);
   (void)freopen("shuffle.out", "w", stdout);
   int n;
   cin >> n;
@@ -102,9 +100,7 @@ int main(){
   vector<int> vres = process(a,v);
   assert(flip({1,2,3}) == vector<int>({1,2,3}));
   assert(flip({3,1,2}) == vector<int>({2,3,1}));
-  //assert(flip({5,4,8,9,1,6,3,2,7,10}) == vector<int>({1,9,2,7,1,6,8,4,3,10}));
-
-
+  assert(flip({1,3,4,5,2}) == vector<int>({1,5,2,3,4}));
   for(int j = 0; j < n; j++){
     cout << vres[j] << endl;
   }
