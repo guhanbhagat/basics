@@ -36,7 +36,8 @@ SAMPLE OUTPUT:
 3333333
 4444444
 */
-#include <iostream>
+#include <stdio.h>
+#include <bits/stdc++.h>
 #include <vector>
 #include <cassert>
 
