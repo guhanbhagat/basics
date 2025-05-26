@@ -85,7 +85,7 @@ vector<int> process( vector<int> a, vector<int> v) {
 
 
 int main(){
-  (void)freopen("shuffle/1.in", "r", stdin);
+  (void)freopen("shuffle.in", "r", stdin);
   (void)freopen("shuffle.out", "w", stdout);
   int n;
   cin >> n;
